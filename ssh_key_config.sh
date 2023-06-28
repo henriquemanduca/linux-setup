@@ -17,11 +17,24 @@ echo "Configuration completed"
 # Script to add the key to a GitHub account
 ssh_key_path="~/.ssh/id_ed25519.pub"
 
+echo "Do you want to send this key to your github account? (y/n)"
+read response
+
+if [[ "$response" == "y" || "$response" == "Y" ]]; then
+    echo "Continuing..."
+    # Add your code here for the desired actions
+else
+    echo "Exiting..."
+    exit 0
+fi
+
 # Read the GitHub username
 read -sp "Enter your GitHub username: " github_username
+echo ""
 
 # Read the GitHub personal access token
 read -sp "Enter your GitHub personal access token: " github_token
+echo ""
 
 # Add the SSH key to GitHub
 echo "Adding SSH key to GitHub..."

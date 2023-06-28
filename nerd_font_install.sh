@@ -1,14 +1,15 @@
 #!/bin/bash
 
-sudo apt-get install -y unzip font-manager
+# Install necessary packages
+sudo apt-get install -y curl unzip font-manager
 
 URL="https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.0/Meslo.zip"
 FILE="Meslo.zip"
 
-wget "$URL"
+curl -O "$URL"
 
 if [ $? -ne 0 ]; then
-  echo "Integrity check failed. Exiting."
+  echo "Integrity check failed."
   exit 1
 fi
 

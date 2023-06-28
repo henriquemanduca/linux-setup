@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# Install necessary packages
+sudo apt-get update 
+sudo apt-get install git
+
 echo "Setting up the .gitconfig"
 
 # Please provide your username and email
