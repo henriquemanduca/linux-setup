@@ -1,4 +1,4 @@
-# Linux Shell Scripts Configuration
+# Linux Shell Scripts Configuration (Debian based)
 
 This repository contains a collection of Linux shell scripts that automate the process of installing various programs and performing system configurations. These scripts can save you time and effort by streamlining the setup process on your Linux machine.
 
