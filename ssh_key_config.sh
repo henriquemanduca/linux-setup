@@ -15,9 +15,9 @@ echo "Configuration completed"
 # cat ~/.ssh/id_ed25519.pub
 
 # Script to add the key to a GitHub account
-ssh_key_path="~/.ssh/id_ed25519.pub"
+ssh_key_path=~/.ssh/id_ed25519.pub
 
-echo "Do you want to send this key to your github account? (y/n)"
+echo "Send this key to your github account? (y/n)"
 read response
 
 if [[ "$response" == "y" || "$response" == "Y" ]]; then
