@@ -3,8 +3,7 @@
 # Install necessary packages
 sudo apt-get install -y curl
 
-curl -O postman.tar.gz https://dl.pstmn.io/download/latest/linux64
-
+curl -o postman.tar.gz https://dl.pstmn.io/download/latest/linux64
 tar -xzf postman.tar.gz
 
 sudo mv Postman /opt/postman
