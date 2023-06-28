@@ -1,0 +1,142 @@
+# Configs ----------------------------------------------------------------------
+
+alias src='source ~/.bashrc && clear'
+alias alias-edit='code ~/.bash_aliases'
+alias hosts-edit='sudo vim /etc/hosts'
+
+# Apps -------------------------------------------------------------------------
+
+alias g='git'
+alias v='vim'
+alias lzg='lazygit'
+alias lzd='lazydocker'
+
+# Commands ---------------------------------------------------------------------
+
+# For Debian
+# alias l='ls'
+# alias ll='ls -lh'
+
+alias la='ls -lah'
+alias lr='ls -R'
+alias lh='ls -d .*'
+
+alias cl='clear'
+alias p='pwd'
+
+# alias rm='rm -i'   # confirm removal
+# alias mv='mv -i'   # confirm move
+alias rmf='rm -rf' # just delete it
+
+alias folder-size='sudo du -sh' # folder size
+
+alias ht='history'
+alias ht-grep='history | grep'
+
+alias process-find='ps aux | grep -i'
+alias process-kill='sudo kill -9'  # -9: SIGKILL
+
+# Apt --------------------------------------------------------------------------
+
+alias up='clear && sudo apt update'
+alias up-l='clear && apt list --upgradable'
+alias up-u='sudo apt upgrade'
+alias up-d='sudo apt dist-upgrade'
+alias up-c='sudo apt clean && sudo apt autoclean && sudo apt autoremove --purge'
+alias ins='sudo apt install'
+alias ins-p='sudo dpkg -i'
+
+# Dnf --------------------------------------------------------------------------
+
+alias d-up='clear && sudo dnf update'
+alias d-up-l='clear && dnf list updates'
+alias d-up-u='sudo dnf upgrade'
+alias d-up-d='sudo dnf distro-sync'
+alias d-up-c='sudo dnf clean all'
+alias d-ins='sudo dnf install'
+
+# Folders ----------------------------------------------------------------------
+
+alias ..='cd ..'
+alias ...='cd ../..'
+
+function home {
+  cd ~
+  clear
+}
+
+function prj {
+  cd ~/projetos/
+}
+
+
+# DOCKER -----------------------------------------------------------------------
+
+alias dk='docker'
+alias dk-service-start='sudo service docker start'
+alias dk-start='docker start'
+alias dk-stop='docker stop'
+alias dk-up='dk compose up -d'
+alias dk-upb='dk compose up -d --build'
+alias dk-down='dk compose down'
+
+function dk-l() {
+    cl;
+    dk logs "$1";
+}
+
+# Kubernets --------------------------------------------------------------------
+
+alias skaf-dev='clear && skaffold dev --port-forward --skip-tests'
+alias skaf-dev-skip='clear && skaffold dev --port-forward --skip-tests'
+alias skaf-build='clear && skaffold build'
+
+# Local
+
+function lpods() {
+    kubectl get pods;
+}
+
+function llogs() {
+    kubectl logs "$1";
+}
+
+function ldesc() {
+    kubectl describe pod "$1";
+}
+
+function lrest() {
+    kubectl rollout restart deployment "$1";
+}
+
+function lroll() {
+    kubectl rollout restart deployment "$1";
+}
+
+# Conda ------------------------------------------------------------------------
+
+alias conda-up-all='conda env update --all'
+alias conda-envs='conda info --envs'
+
+function conda-env-create() {
+    conda create --name $1
+    conda activate $1
+}
+
+# MVN --------------------------------------------------------------------------
+
+alias mvn-w='mvn wrapper:wrapper'
+alias mvn-c='mvn compile jib:dockerBuild'
+
+# Node -------------------------------------------------------------------------
+
+alias rm-nm='rm -Rf node_modules/ && rm package-lock.json'
+
+alias npm-st='cl && npm run start'
+alias npm-i='cl && npm install'
+alias npm-if='cl && npm install --force'
+
+# Angular CLI ------------------------------------------------------------------
+
+alias ng-b='cl && ng build'
+alias ng-bw='cl && ng build --wath'

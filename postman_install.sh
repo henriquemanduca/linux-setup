@@ -1,13 +1,16 @@
 #!/bin/bash
 
-wget -O postman.tar.gz https://dl.pstmn.io/download/latest/linux64
+# Install necessary packages
+sudo apt-get install -y curl
+
+curl -O postman.tar.gz https://dl.pstmn.io/download/latest/linux64
 
 tar -xzf postman.tar.gz
 
 sudo mv Postman /opt/postman
-
 sudo ln -s /opt/postman/Postman /usr/bin/postman
 
+# Shortcut creation
 cat > ~/.local/share/applications/postman.desktop <<EOL
 [Desktop Entry]
 Encoding=UTF-8

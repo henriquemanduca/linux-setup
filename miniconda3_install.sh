@@ -5,8 +5,6 @@ sudo apt-get install -y curl
 
 # Set the installation directory
 INSTALL_DIR="$HOME/miniconda3"
-
-# Set the Miniconda3 download URL
 CONDA_URL="https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh"
 
 # Download Miniconda3 installer
