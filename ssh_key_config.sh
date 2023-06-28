@@ -21,22 +21,16 @@ echo "Do you want to send this key to your github account? (y/n)"
 read response
 
 if [[ "$response" == "y" || "$response" == "Y" ]]; then
-    echo "Continuing..."
-    # Add your code here for the desired actions
-else
-    echo "Exiting..."
-    exit 0
+    # Read the GitHub username
+    read -sp "Enter your GitHub username: " github_username
+    echo ""
+
+    # Read the GitHub personal access token
+    read -sp "Enter your GitHub personal access token: " github_token
+    echo ""
+
+    # Add the SSH key to GitHub
+    echo "Adding SSH key to GitHub..."
+    curl -u "$github_username:$github_token" -X POST -d "{\"title\":\"$(hostname)\",\"key\":\"$(cat $ssh_key_path)\"}" "https://api.github.com/user/keys"
+    echo "SSH key added successfully!"
 fi
-
-# Read the GitHub username
-read -sp "Enter your GitHub username: " github_username
-echo ""
-
-# Read the GitHub personal access token
-read -sp "Enter your GitHub personal access token: " github_token
-echo ""
-
-# Add the SSH key to GitHub
-echo "Adding SSH key to GitHub..."
-curl -u "$github_username:$github_token" -X POST -d "{\"title\":\"$(hostname)\",\"key\":\"$(cat $ssh_key_path)\"}" "https://api.github.com/user/keys"
-echo "SSH key added successfully!"
