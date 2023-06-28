@@ -4,6 +4,7 @@ This repository contains a collection of Linux shell scripts that automate the p
 
 ## TODO
 
+- Populate list of available scripts and their definition.
 - Adjust to install downloaded fonts automatically (nerd_fonts_install.sh).
 
 ## Getting Started
@@ -16,7 +17,6 @@ chmod +x script_name.sh
 ~~~
 
 Run the desired script:
-
 ~~~shell
 ./script_name.sh
 ~~~
@@ -28,7 +28,7 @@ This repository contains the following shell scripts:
 
 - apps.sh: Installs some programs like Timeshift.
 - docker_install.sh: Install docker engine.
-- TODO...
+- ...
 
 Feel free to explore the repository and use the scripts that align with your requirements.
 
