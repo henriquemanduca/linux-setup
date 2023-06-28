@@ -1,4 +1,4 @@
-!/bin/bash
+#!/bin/bash
 
 # Install necessary packages
 sudo apt-get update

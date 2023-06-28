@@ -1,4 +1,4 @@
-!/bin/bash
+#!/bin/bash
 
 # Install necessary packages to use HTTPS repositories
 sudo apt-get update
