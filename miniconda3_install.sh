@@ -9,7 +9,7 @@ CONDA_URL="https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 
 # Download Miniconda3 installer
 echo "Downloading Miniconda3 installer..."
-curl -sSL $CONDA_URL -o miniconda.sh
+curl -SL $CONDA_URL -o miniconda.sh
 
 # Install Miniconda3
 echo "Installing Miniconda3..."
