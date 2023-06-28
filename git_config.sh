@@ -13,6 +13,8 @@ read -p "Enter your e-mail: " email
 git config --global user.name "$name"
 git config --global user.email "$email"
 
+git config pull.rebase true   # rebase
+
 git config --global alias.ci commit
 git config --global alias.st status
 git config --global alias.co checkout
