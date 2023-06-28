@@ -1,7 +1,6 @@
 #!/bin/bash
 
 # Install necessary packages
-sudo apt-get update 
 sudo apt-get install git
 
 echo "Setting up the .gitconfig"
@@ -12,8 +11,7 @@ read -p "Enter your e-mail: " email
 
 git config --global user.name "$name"
 git config --global user.email "$email"
-
-git config pull.rebase true   # rebase
+git config pull.rebase true
 
 git config --global alias.ci commit
 git config --global alias.st status

@@ -2,6 +2,10 @@
 
 This repository contains a collection of Linux shell scripts that automate the process of installing various programs and performing system configurations. These scripts can save you time and effort by streamlining the setup process on your Linux machine.
 
+## TODO
+
+- Adjust to install downloaded fonts automatically (nerd_fonts_install.sh).
+
 ## Getting Started
 
 To get started with using these shell scripts, follow these steps:
