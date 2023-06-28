@@ -67,8 +67,8 @@ function home {
 
 function prj {
   cd ~/projetos/
+  clear
 }
-
 
 # DOCKER -----------------------------------------------------------------------
 
@@ -81,8 +81,8 @@ alias dk-upb='dk compose up -d --build'
 alias dk-down='dk compose down'
 
 function dk-l() {
-    cl;
-    dk logs "$1";
+  cl;
+  dk logs "$1";
 }
 
 # Kubernets --------------------------------------------------------------------
@@ -94,23 +94,23 @@ alias skaf-build='clear && skaffold build'
 # Local
 
 function lpods() {
-    kubectl get pods;
+  kubectl get pods;
 }
 
 function llogs() {
-    kubectl logs "$1";
+  kubectl logs "$1";
 }
 
 function ldesc() {
-    kubectl describe pod "$1";
+  kubectl describe pod "$1";
 }
 
 function lrest() {
-    kubectl rollout restart deployment "$1";
+  kubectl rollout restart deployment "$1";
 }
 
 function lroll() {
-    kubectl rollout restart deployment "$1";
+  kubectl rollout restart deployment "$1";
 }
 
 # Conda ------------------------------------------------------------------------
@@ -119,8 +119,8 @@ alias conda-up-all='conda env update --all'
 alias conda-envs='conda info --envs'
 
 function conda-env-create() {
-    conda create --name $1
-    conda activate $1
+  conda create --name $1
+  conda activate $1
 }
 
 # MVN --------------------------------------------------------------------------
