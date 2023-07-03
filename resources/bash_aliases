@@ -118,8 +118,9 @@ function lroll() {
 alias conda-up-all='conda env update --all'
 alias conda-envs='conda info --envs'
 
+## Sample: conda-env-create meu_env 3.8
 function conda-env-create() {
-  conda create --name $1
+  conda create --name $1 python=$2
   conda activate $1
 }
 
