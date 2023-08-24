@@ -1,8 +1,8 @@
 # Configs ----------------------------------------------------------------------
 
 alias src='source ~/.bashrc && clear'
-alias alias-edit='code ~/.bash_aliases'
-alias hosts-edit='sudo vim /etc/hosts'
+alias aliasedit='code ~/.bash_aliases'
+alias hostsedit='sudo vim /etc/hosts'
 
 # Apps -------------------------------------------------------------------------
 
@@ -39,21 +39,21 @@ alias process-kill='sudo kill -9'  # -9: SIGKILL
 # Apt --------------------------------------------------------------------------
 
 alias up='clear && sudo apt update'
-alias up-l='clear && apt list --upgradable'
-alias up-u='sudo apt upgrade'
-alias up-d='sudo apt dist-upgrade'
-alias up-c='sudo apt clean && sudo apt autoclean && sudo apt autoremove --purge'
+alias upl='clear && apt list --upgradable'
+alias upu='sudo apt upgrade'
+alias upd='sudo apt dist-upgrade'
+alias upc='sudo apt clean && sudo apt autoclean && sudo apt autoremove --purge'
 alias ins='sudo apt install'
-alias ins-p='sudo dpkg -i'
+alias insp='sudo dpkg -i'
 
 # Dnf --------------------------------------------------------------------------
 
-alias d-up='clear && sudo dnf update'
-alias d-up-l='clear && dnf list updates'
-alias d-up-u='sudo dnf upgrade'
-alias d-up-d='sudo dnf distro-sync'
-alias d-up-c='sudo dnf clean all'
-alias d-ins='sudo dnf install'
+alias dup='clear && sudo dnf update'
+alias dupl='clear && dnf list updates'
+alias dupu='sudo dnf upgrade'
+alias dupd='sudo dnf distro-sync'
+alias dupc='sudo dnf clean all'
+alias dins='sudo dnf install'
 
 # Folders ----------------------------------------------------------------------
 
@@ -133,9 +133,9 @@ alias mvn-c='mvn compile jib:dockerBuild'
 
 alias rm-nm='rm -Rf node_modules/ && rm package-lock.json'
 
-alias npm-st='cl && npm run start'
-alias npm-i='cl && npm install'
-alias npm-if='cl && npm install --force'
+alias npmst='cl && npm run start'
+alias npmi='cl && npm install'
+alias npmif='cl && npm install --force'
 
 # Angular CLI ------------------------------------------------------------------
 
